@@ -18,7 +18,7 @@
 .header-links-list {
   display: flex;
   flex-direction: row;
-  gap: 20px;
+  gap: 25px;
   list-style-type: circle;
 }
 
@@ -34,6 +34,7 @@
   display: block;
   grid-column: 5 / 6;
   justify-content: center;
+  padding: 0 36px 0;
 }
 
 .header-logo-image {
@@ -57,6 +58,7 @@
   text-decoration: underline;
   text-underline-offset: 18%;
 }
+
 /* Сверху код CSS шапки сайта */
 
 .cover {
@@ -66,6 +68,7 @@
   justify-content: space-between; 
   background: no-repeat center/cover url('../images/cover.jpg');
   color: #fff;
+  height: 757px;
 }
 
 .overlay {
@@ -75,7 +78,6 @@
 }
 
 .cover-title {
-  padding: 0 50px;
   position: relative;
   z-index: 1;
   display: flex;
@@ -84,7 +86,7 @@
   font-size: 100px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 160px 50px;
+  padding: 106px 50px;
 }
 
 .cover-title-text {
@@ -103,15 +105,16 @@
   font-size: 22px;
   z-index: 1;
   font-weight: 400;
-  padding: 0 50px 50px;
+  padding: 65px 50px 50px;
   gap: 80px;
   text-transform: uppercase;
   word-spacing: 18px;
   display: flex;
+  
 }
 
 .bet-button {
-  padding: 12px 32px;
+  padding: 12px 32px 11px;
   background: transparent;
   color: #fff;
   border: 1px solid #fff;
@@ -126,8 +129,10 @@
 
 .cover-description-text {
   display: flex;
-  flex-direction: row;
-  align-items: start;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px
+  
 }
 /* сверху код ОНО ТЕБЕ НАДО */
 
@@ -142,6 +147,7 @@
   padding: 0 40px 27px;
   font-size: 40px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .card-list {
@@ -155,9 +161,7 @@
   display: flex;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.6);
-  list-style: none;
 }
-
 
 .card-link {
   display: block;
@@ -214,7 +218,6 @@
   font-weight: 400;
 }
 
-
 /* Блок about */ 
 
 .about {
@@ -222,6 +225,7 @@
 }
 
 .about-column {
+  height: 595px;
   display: grid;
   grid-template: repeat(2, 1fr) / 335px 1fr;
   grid-template-areas: 
@@ -235,10 +239,12 @@
 
 .about-title--title {
   grid-area: title;
+  width: 693px;
 }
 
 .about-text--text {
   grid-area: text;
+  width: 693px;
 }
 
 .about-logo {
@@ -262,7 +268,7 @@
   text-transform: uppercase;
   display: flex;
   justify-content: start;
-  padding: 101px;
+  align-items: center;
 }
 
 .about-text {
@@ -329,7 +335,8 @@
   grid-column: 7/-1;
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 48px;
 }
 
 .footer-social-list-item {
