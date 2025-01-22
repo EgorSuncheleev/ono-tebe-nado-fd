@@ -17,16 +17,18 @@
 .header-links-list {
   display: flex;
   flex-direction: row;
-  gap: 25px;
-  list-style-type: circle;
+  gap: 13px;
 }
 
-.list-item-no-bullit {
-  list-style-type: none;
+.header-links-list-item {
+  margin: 0 6px 0 7px;
+  list-style-type: circle;
 }
 
 .header-link-active {
   text-decoration: none;
+  margin: 0 6px 0 7px;
+  list-style-type: none;
 }
 
 .header-logo {
@@ -43,10 +45,14 @@
 
 .header-address {
   grid-column: 6/-1;
+}
+
+.address-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-self: end;
+  font-size: 18px;
 }
 
 .address-text {
@@ -67,13 +73,15 @@
   justify-content: space-between;
   background: no-repeat center/cover url("../images/cover.jpg");
   color: #fff;
-  height: 757px;
+  min-height: 757px;
 }
 
 .overlay {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
 }
 
 .cover-title {
@@ -85,7 +93,7 @@
   font-size: 100px;
   font-weight: 700;
   text-transform: uppercase;
-  padding: 160px 50px 106px;
+  padding: 165px 50px 0;
 }
 
 .cover-title-text {
@@ -93,19 +101,23 @@
 }
 
 .aligned-text-center {
-  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .aligned-text-right {
-  text-align: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 .cover-description {
   font-size: 22px;
   z-index: 1;
   font-weight: 400;
-  padding: 0 50px 50px;
-  gap: 80px;
+  padding: 107px 50px 50px;
+  gap: 107px;
   text-transform: uppercase;
   word-spacing: 18px;
   display: flex;
@@ -123,13 +135,13 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+  font-family: "Raleway" Arial, Helvetica, sans-serif;
 }
 
 .cover-description-text {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px;
 }
 /* сверху код ОНО ТЕБЕ НАДО */
 
@@ -137,7 +149,6 @@
   padding: 180px 24px 0;
   display: flex;
   flex-direction: column;
-  gap: 27px;
 }
 
 .lots-heading {
@@ -151,6 +162,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 25px;
 }
 
 .lots-card-list-item {
@@ -172,8 +184,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  min-height: 600px;
-  width: 335px;
+  min-height: 596px;
+  width: 334px;
 }
 
 .card-type-film {
@@ -221,7 +233,7 @@
 }
 
 .about-column {
-  height: 595px;
+  padding: 35px 48px;
   display: grid;
   grid-template: repeat(2, 1fr) / 335px 1fr;
   grid-template-areas:
@@ -229,18 +241,8 @@
     ". text";
 }
 
-.about-logo--logo {
-  grid-area: logo;
-}
-
 .about-title--title {
   grid-area: title;
-  width: 693px;
-}
-
-.about-text--text {
-  grid-area: text;
-  width: 693px;
 }
 
 .about-logo {
@@ -251,6 +253,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  grid-area: logo;
 }
 
 .about-logo-img {
@@ -265,6 +268,7 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  grid-area: title;
 }
 
 .about-text {
@@ -272,13 +276,11 @@
   font-weight: 400;
   line-height: 24px;
   width: 693px;
+  grid-area: text;
 }
 
-.about-text2 {
-  padding: 130px 0 0;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 24px;
+.about-text-down {
+  padding-top: 140px
 }
 
 /* сверху блок about */
@@ -292,25 +294,22 @@
 
 .footer-address {
   grid-column: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .address-phone {
-  font-family: Raleway;
+  font-family: "Raleway" Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-style: normal;
 }
 
 .address-email {
-  font-family: Raleway;
+  font-family: "Raleway" Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-style: normal;
 }
 
 .address-address {
-  font-family: Raleway;
+  font-family: "Raleway" Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-style: normal;
 }
@@ -321,6 +320,10 @@
 
 .footer-links-list {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-link-active {
@@ -333,9 +336,7 @@
   display: flex;
   justify-content: center;
   gap: 48px;
-}
-
-.footer-social-list-item {
-  width: 48px;
+  width: 240px;
   height: 48px;
 }
+
