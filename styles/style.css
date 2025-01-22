@@ -233,9 +233,9 @@
 }
 
 .about-column {
-  padding: 35px 48px;
+  padding: 35px 48px 0;
   display: grid;
-  grid-template: repeat(2, 1fr) / 335px 1fr;
+  grid-template: 283px 1fr / 334px 1fr;
   grid-template-areas:
     "logo title"
     ". text";
@@ -268,16 +268,19 @@
   grid-area: title;
 }
 
+.text-main {
+  grid-area: text;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
 .about-text {
   font-size: 20px;
   font-weight: 400;
   line-height: 24px;
   width: 693px;
   grid-area: text;
-}
-
-.text-down {
-  padding-top: 130px;
 }
 
 /* сверху блок about */
@@ -333,7 +336,10 @@
   display: flex;
   justify-content: center;
   gap: 48px;
-  width: 240px;
+}
+
+.footer-social-icon {
+  width: 48px;
   height: 48px;
 }
 
