@@ -229,7 +229,7 @@
 /* Блок about */
 
 .about {
-  padding: 120px 24px 180px;
+  padding: 120px 24px 0;
 }
 
 .about-column {
@@ -239,10 +239,6 @@
   grid-template-areas:
     "logo title"
     ". text";
-}
-
-.about-title--title {
-  grid-area: title;
 }
 
 .about-logo {
@@ -267,7 +263,8 @@
   text-transform: uppercase;
   display: flex;
   justify-content: start;
-  align-items: center;
+  align-items: start;
+  padding-top: 98px;
   grid-area: title;
 }
 
@@ -279,8 +276,8 @@
   grid-area: text;
 }
 
-.about-text-down {
-  padding-top: 140px
+.text-down {
+  padding-top: 130px;
 }
 
 /* сверху блок about */
@@ -289,7 +286,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr) repeat(3, 1fr) repeat(3, 1fr);
   font-size: 18px;
-  padding: 0 50px 82px;
+  padding: 180px 50px 82px;
 }
 
 .footer-address {
