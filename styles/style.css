@@ -3,22 +3,23 @@
 .header {
   padding: 92px 50px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr) repeat(1, 2fr) repeat(4, 1fr);
+  grid-template-columns: 1fr min-content 1fr;
   font-size: 18px;
+  align-items: center;
 }
 
 .header-menu {
-  grid-column: span 4;
   display: flex;
   align-items: center;
   text-transform: lowercase;
+  line-height: 21.13px;
 }
 
 .header-links-list {
   display: flex;
   flex-direction: row;
   list-style: circle;
-  gap: 31px;
+  gap: 32px;
   font-size: 18px;
 }
 
@@ -26,13 +27,12 @@
   list-style: none;
 }
 
-.header-link {
+.header-active-link {
   text-decoration: none;
 }
 
 .header-logo {
   display: block;
-  grid-column: 5 / 6;
   justify-content: center;
   padding: 0 36px 0;
 }
@@ -42,20 +42,26 @@
   height: 105px;
 }
 
-.header-address {
-  grid-column: 6/-1;
+.justify-self-end  {
+  justify-self: end;
+  max-width: 240px;
 }
 
 .address-column {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  justify-self: end;
-  font-size: 18px;
+  max-width: 240px;
 }
 
-.address-text {
+.address-width { /* В макете ширина абзаца адреса меньше ширины контейнера на 4px */
+  max-width: 236px;
+}
+
+.address-header-text {
   width: 235px;
+  font-size: 18px;
+
 }
 
 .address-link {
@@ -110,7 +116,7 @@
   text-align: end;
 }
 
-.letter-spacing {
+.letter-spacing-none {
   letter-spacing: 0;
 }
 
@@ -230,9 +236,9 @@
 }
 
 .about-column {
-  padding: 35px 24px 0px;
+  padding-top: 35px;
   display: grid;
-  grid-template: 236px 312px/ 334px 1fr;
+  grid-template: auto auto/ 334px 1fr;
   grid-template-areas:
     "logo title"
     ". text";
@@ -244,11 +250,10 @@
   background-color: black;
   border-radius: 100%;
   display: flex;
-  justify-self: center;
   justify-content: center;
   align-items: center;
   grid-area: logo;
-  margin-right: 72px;
+  justify-self: center;
 }
 
 .about-logo-img {
@@ -260,11 +265,12 @@
   font-size: 40px;
   font-weight: 700;
   text-transform: uppercase;
-  display: flex;
-  justify-content: start;
-  align-items: start;
-  padding-top: 98px;
   grid-area: title;
+  align-self: center;
+}
+
+.ml-25 {
+  margin-left: 25px;
 }
 
 .text-main {
@@ -272,6 +278,7 @@
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-top: 8px;
 }
 
 .about-text {
@@ -286,30 +293,26 @@
 
 .footer {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: repeat(3, 1fr);
   font-size: 18px;
   padding: 180px 50px 82px;
 }
 
-.footer-address {
-  grid-column: auto;
+.justify-self-end  {
+  justify-self: end;
 }
 
-.address-text {
+.address-font {
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   font-style: normal;
-}
-
-.address-link {
-  font-family: "Raleway", sans-serif;
-  font-size: 20px;
-  font-style: normal;
+  line-height: 24px;
 }
 
 .footer-links-list {
   list-style-type: none;
   text-underline-offset: 3px;
+  text-transform: lowercase;
 }
 
 .footer-link-active {
@@ -320,7 +323,7 @@
   display: flex;
   gap: 48px;
   list-style: none;
-  justify-content: center;
+  justify-content: right;
   grid-column: auto;
 }
 
